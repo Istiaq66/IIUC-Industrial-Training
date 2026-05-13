@@ -37,9 +37,8 @@ void main() {
 
 
   // ---------- List (ordered collection) ----------
-  List<int> numbers = [1, 2, 3];
+  List numbers = [1, 2, 3];
   print("List numbers: $numbers");
-
 
   // ---------- Map (key-value pair) ----------
   Map<String, String> user = {
@@ -92,4 +91,13 @@ void main() {
   late String language;
   language = "Dart";
   print("late language: $language");
+
+
+
+  String number = "33.76767";
+  double number2 = double.parse(number);
+  print(number2);
+
+  String number3 = number2.toString();
+  print("---->>> $number3");
 }

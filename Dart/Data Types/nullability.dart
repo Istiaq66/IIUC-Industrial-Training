@@ -1,13 +1,4 @@
 // int phoneNumber = null;
-void isEvenOrOdd(int value){
-  if(value.isEven){
-     print('$value is Even');
-  }else{
-    print('$value is Odd');
-  }
-}
-
-
 
 void main() {
 
@@ -19,9 +10,6 @@ void main() {
 
   // 1. Non-nullable (cannot be null)
   // 2. Nullable (can be null)
-
-  var value = 3;
-  isEvenOrOdd(value);
 
   String? name;
 
@@ -55,7 +43,7 @@ void main() {
   print("?. operator: ${message?.length}"); // null (no crash)
 
   message = "Hello Dart";
-  print("?. operator: ${message?.length}");
+  print("?. operator: ${message.length}");
 
 
   // -------------------------------
@@ -63,7 +51,7 @@ void main() {
   // -------------------------------
   // Name: "Force unwrap operator"
 
-  String? country = "Bangladesh";
+  String? country;
 
   print("! operator: ${country!.length}");
 }

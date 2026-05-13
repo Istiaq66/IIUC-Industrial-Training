@@ -141,7 +141,84 @@ class Dog implements Animal {
 
 ---
 
-## Part 4 — One-line reminders
+## Part 4 — Abstract class vs Interface (deep dive)
+
+### Are they the same thing?
+
+No. They are related concepts, but they behave differently in Dart.
+
+- **Abstract class** → defines WHAT to do + SOME of HOW to do it
+- **Interface** → defines ONLY WHAT to do (a contract, nothing more)
+
+### Abstract class
+
+An abstract class can contain all of the following:
+- Abstract methods (no body — subclass must implement)
+- Concrete methods (with body — subclass inherits for free)
+- Variables (state)
+- Constructors
+
+```dart
+abstract class Animal {
+  void makeSound(); // WHAT — must be implemented by subclass
+
+  void sleep() {
+    print("Sleeping"); // HOW — already implemented
+  }
+}
+```
+
+> **Key idea:** Abstract class = partially implemented blueprint
+
+### Interface in Dart
+
+Dart does not have a separate `interface` keyword. Instead, any class can act as an interface using `implements`.
+
+```dart
+class Animal {
+  void makeSound() {}
+}
+
+class Dog implements Animal {
+  @override
+  void makeSound() {
+    print("Bark");
+  }
+}
+```
+
+When using `implements`, two rules always apply:
+- You **must** override everything.
+- Even existing method implementations are completely ignored.
+
+### Comparison table
+
+| Feature | Abstract class | Interface (`implements`) |
+|---|---|---|
+| Methods | Abstract + concrete | Must override all |
+| Code reuse | Yes | No |
+| State (fields) | Yes | Not meaningful |
+| Constructors | Yes | No |
+| Purpose | Base + shared logic | Strict contract |
+
+### Real-life analogy
+
+**Abstract class** — a partially built house. Some rooms are already finished; you complete the rest.
+
+**Interface** — a blueprint only. Nothing is built — you construct everything yourself.
+
+### Dart insight
+
+| Keyword | What it means |
+|---|---|
+| `extends` | Inheritance + code reuse |
+| `implements` | Full contract enforcement |
+
+An abstract class in Dart can play both roles — use it with `extends` for inheritance, or with `implements` as a pure interface. The keyword you choose decides the behaviour.
+
+---
+
+## Part 5 — One-line reminders
 
 | Concept | Remember it as... |
 |---|---|

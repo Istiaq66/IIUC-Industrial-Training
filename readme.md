@@ -27,10 +27,10 @@ The same method name can behave differently depending on context. There are two 
 
 These two keywords look similar but solve very different problems. Mixing them up is one of the most common mistakes in Dart.
 
-| Keyword | Inherits code? | Must re-implement? | Best for |
-|---|---|---|---|
-| `extends` | Yes | No (optional) | Reusing and customising behaviour |
-| `implements` | No | Yes — everything | Enforcing a shared API contract |
+| Keyword      | Inherits code? | Must re-implement? | Best for                          |
+|--------------|----------------|--------------------|-----------------------------------|
+| `extends`    | Yes            | No (optional)      | Reusing and customising behaviour |
+| `implements` | No             | Yes — everything   | Enforcing a shared API contract   |
 
 ### `extends` — inheriting behaviour
 
@@ -131,13 +131,13 @@ class Dog implements Animal {
 
 ### Comparison table
 
-| Feature | Abstract class | Interface (`implements`) |
-|---|---|---|
-| Methods | Abstract + concrete | Must override all |
-| Code reuse | Yes | No |
-| Can hold state (fields)? | Yes | Not meaningfully |
-| Constructors | Yes | No |
-| Purpose | Shared base + logic | Strict API contract |
+| Feature                  | Abstract class      | Interface (`implements`) |
+|--------------------------|---------------------|--------------------------|
+| Methods                  | Abstract + concrete | Must override all        |
+| Code reuse               | Yes                 | No                       |
+| Can hold state (fields)? | Yes                 | Not meaningfully         |
+| Constructors             | Yes                 | No                       |
+| Purpose                  | Shared base + logic | Strict API contract      |
 
 ---
 
@@ -193,13 +193,13 @@ When using `implements`, two rules always apply:
 
 ### Comparison table
 
-| Feature | Abstract class | Interface (`implements`) |
-|---|---|---|
-| Methods | Abstract + concrete | Must override all |
-| Code reuse | Yes | No |
-| State (fields) | Yes | Not meaningful |
-| Constructors | Yes | No |
-| Purpose | Base + shared logic | Strict contract |
+| Feature        | Abstract class      | Interface (`implements`) |
+|----------------|---------------------|--------------------------|
+| Methods        | Abstract + concrete | Must override all        |
+| Code reuse     | Yes                 | No                       |
+| State (fields) | Yes                 | Not meaningful           |
+| Constructors   | Yes                 | No                       |
+| Purpose        | Base + shared logic | Strict contract          |
 
 ### Real-life analogy
 
@@ -209,9 +209,9 @@ When using `implements`, two rules always apply:
 
 ### Dart insight
 
-| Keyword | What it means |
-|---|---|
-| `extends` | Inheritance + code reuse |
+| Keyword      | What it means             |
+|--------------|---------------------------|
+| `extends`    | Inheritance + code reuse  |
 | `implements` | Full contract enforcement |
 
 An abstract class in Dart can play both roles — use it with `extends` for inheritance, or with `implements` as a pure interface. The keyword you choose decides the behaviour.
@@ -220,11 +220,11 @@ An abstract class in Dart can play both roles — use it with `extends` for inhe
 
 ## Part 5 — One-line reminders
 
-| Concept | Remember it as... |
-|---|---|
-| `extends` | "I want to *be* this class and inherit its behaviour." |
-| `implements` | "I want to *look like* this class but write my own code." |
-| Abstract class | A partial blueprint — some logic is already provided. |
-| Interface | A strict contract — you build everything from scratch. |
+| Concept        | Remember it as...                                         |
+|----------------|-----------------------------------------------------------|
+| `extends`      | "I want to *be* this class and inherit its behaviour."    |
+| `implements`   | "I want to *look like* this class but write my own code." |
+| Abstract class | A partial blueprint — some logic is already provided.     |
+| Interface      | A strict contract — you build everything from scratch.    |
 
 > **Key insight:** An abstract class in Dart can act as *both*. Use it with `extends` for inheritance, or with `implements` as a pure contract. The keyword you choose decides the behaviour.

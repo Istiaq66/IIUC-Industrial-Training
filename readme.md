@@ -83,11 +83,6 @@ Dart has **no `interface` keyword**. Instead, any class can act as an interface 
 
 ### Abstract class — a partially built blueprint
 
-An abstract class can contain:
-- **Abstract methods** — declared but with no body; subclasses must implement them.
-- **Concrete methods** — fully implemented; subclasses inherit them for free.
-- Fields, constructors, and state.
-
 ```dart
 abstract class Animal {
   // No body — subclass MUST implement this
@@ -209,9 +204,9 @@ When using `implements`, two rules always apply:
 
 ### Dart insight
 
-| Keyword      | What it means             |
+| Keyword      | What it beans             |
 |--------------|---------------------------|
-| `extends`    | Inheritance + code reuse  |
+| `extends`    | Inheritance               |
 | `implements` | Full contract enforcement |
 
 An abstract class in Dart can play both roles — use it with `extends` for inheritance, or with `implements` as a pure interface. The keyword you choose decides the behaviour.

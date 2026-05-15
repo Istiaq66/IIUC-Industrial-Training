@@ -209,9 +209,9 @@ When using `implements`, two rules always apply:
 
 ### Dart insight
 
-| Keyword      | What it means             |
-|--------------|---------------------------|
-| `extends`    | Inheritance + code reuse  |
+| Keyword      | What it mean         |
+|--------------|----------------------|
+| `extends`    |  code reuse |
 | `implements` | Full contract enforcement |
 
 An abstract class in Dart can play both roles — use it with `extends` for inheritance, or with `implements` as a pure interface. The keyword you choose decides the behaviour.
